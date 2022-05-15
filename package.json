@@ -1,6 +1,6 @@
 {
   "name": "cognito-js",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "A simple Node.js library for managing users on Amazon Cognito User Pool using client-cognito-identity AWS SDK v3",
   "main": "dist/index.js",
   "author": "Santiago Barbat <barbatsan@gmail.com>",

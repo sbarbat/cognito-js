@@ -8,7 +8,6 @@ import {
 } from "@aws-sdk/client-cognito-identity-provider";
 import {
   adminGetUser,
-  associateSoftwareToken,
   AuthParameters,
   getUser,
   initiateAuth,
@@ -24,6 +23,8 @@ import {
   signUp,
   signUpConfirm,
   signUpResend,
+  softwareTokenAssociate,
+  softwareTokenVerify,
 } from "./cognito";
 import {} from "./cognito/adminGetUser";
 import { getSecretHash } from "./cognito/getSecretHash";
@@ -54,10 +55,6 @@ class CognitoJS {
     return this.cognitoClientSecret
       ? getSecretHash(this.cognitoClientId, this.cognitoClientSecret, username)
       : undefined;
-  }
-
-  associateSoftwareToken(accessToken: string, session: string) {
-    return associateSoftwareToken(accessToken, session);
   }
 
   adminGetUser(username: string) {
@@ -200,6 +197,19 @@ class CognitoJS {
     userContextData?: UserContextDataType
   ) {
     return signUpResend(this.cognitoClientId, username, hash, userContextData);
+  }
+
+  softwareTokenAssociate(accessToken?: string, session?: string) {
+    return softwareTokenAssociate(accessToken, session);
+  }
+
+  softwareTokenVerify(
+    userCode: string,
+    friendlyDeviceName: string,
+    accessToken?: string,
+    session?: string
+  ) {
+    return softwareTokenVerify(userCode, friendlyDeviceName, accessToken, session);
   }
 }
 

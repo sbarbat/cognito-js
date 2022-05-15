@@ -4,8 +4,8 @@ import {
 } from "@aws-sdk/client-cognito-identity-provider";
 import { cognitoClient } from ".";
 
-export const associateSoftwareToken = (
-  accessToken: string,
+export const softwareTokenAssociate = (
+  accessToken?: string, // OR
   session?: string
 ): Promise<AssociateSoftwareTokenCommandOutput> => {
   const command = new AssociateSoftwareTokenCommand({

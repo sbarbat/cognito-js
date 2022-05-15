@@ -3,7 +3,6 @@ import { CognitoIdentityProviderClient } from '@aws-sdk/client-cognito-identity-
 export const cognitoClient = new CognitoIdentityProviderClient({ region: 'us-east-1' });
 
 export * from './adminGetUser';
-export * from './associateSoftwareToken';
 export * from './getUser';
 export * from './index';
 export * from './initiateAuth';
@@ -19,3 +18,5 @@ export * from './signOut';
 export * from './signUp';
 export * from './signUpConfirm';
 export * from './signUpResend';
+export * from './softwareTokenAssociate';
+export * from './softwareTokenVerify';
