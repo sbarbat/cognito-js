@@ -1,0 +1,24 @@
+{
+  "name": "client-cognito-identity-js-wrapper",
+  "version": "0.2.4",
+  "description": "A simple Node.js library for managing users on Amazon Cognito User Pool using client-cognito-identity AWS SDK v3",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo 'Sorry, no tests for now, but open to PRs :-)' && exit 0"
+  },
+  "author": "Santiago Barbat <barbatsan@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity": "^3.87.0",
+    "@aws-sdk/client-cognito-identity-provider": "^3.87.0",
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sbarbat/client-cognito-identity-js-wrapper"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+  }
+}
